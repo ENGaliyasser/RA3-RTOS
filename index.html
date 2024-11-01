@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="RA3page/img/logo2.png" type="image/png">
+    <title>RA3 RTOS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="RA3page/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="RA3page/lib/highlight/default.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="RA3page/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Navbar  -->
+        <div class="container-fluid header-top">
+            <div class="container d-flex align-items-center">
+                <div class="d-flex align-items-center h-100">
+                    <a href="#"  style="height: 125px;">
+                        <!-- <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Electra</h1> -->
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                </div>
+                <div class="w-100 h-100">
+                    <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
+                        <div class="row gx-0 align-items-center">
+                            <div class="col-lg-8 text-center text-lg-center mb-lg-0">
+                                <div class="d-flex flex-wrap">
+                                    <div class="border-end border-primary pe-3">
+                                        <a href="tel:+2001154784667" class="text-muted small">
+                                            <i class="fas fa-phone-alt text-primary me-2"></i>+2001154784667
+                                        </a>
+                                    </div>
+                                    <div class="ps-3">
+                                        <a href="mailto:engaliyasser7@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>engaliyasser7@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center text-lg-end">
+                                <div class="d-flex justify-content-end">
+                                    <div class="d-flex border-end border-primary pe-3">
+                                        <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/ali.yasser.5"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/ali.yasser.7/"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn p-0 text-primary me-3" href="https://github.com/ENGaliyasser"><i class="fab fa-github"></i></a>
+                                        <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/in/engaliyasser/"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                    <div class="dropdown ms-3">
+                                        <a href="#" class="dropdown-toggle text-white" data-bs-toggle="dropdown"><small class="text-body"><i class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">English</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-bar px-0 py-lg-0" style="height: 90px;">
+                        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
+                            <a href="#" class="navbar-brand-2 ra3-navbar-brand">
+                                <h1 class="text-primary mb-0">
+                                    
+                                    <img src="RA3page/img/logo2.png" alt="RA3 RTOS Logo" class="logo-img"> RA3 RTOS
+                                </h1>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <div class="navbar-nav ms-auto bg-white">
+
+                                    <div class="nav-btn ps-3">
+                                        <a href="https://github.com/ENGaliyasser/RA3-RTOS" class="btn btn-dark py-2 px-4 ms-0 ms-lg-3" target="_blank"> Repository</a>
+                                    </div>
+                                    <div class="nav-btn ps-3">
+                                        <a href="https://raw.githubusercontent.com/ENGaliyasser/RA3-RTOS/30245c0a75509bd3eca3e1bb194e8ddc91a90234/documentation/RA3_RTOS_documentation.pdf" class="btn btn-secondary py-2 px-4 ms-0 ms-lg-3"> Documentation</a>
+                                    </div>
+
+                                    <div class="nav-btn ps-3">
+                                        <a href="https://github.com/ENGaliyasser/RA3-RTOS/archive/refs/tags/v-1.0.0.zip" class="btn btn-primary py-2 px-4 ms-0 ms-lg-3"> Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar  -->
+    <!-- Sidebar Start -->
+    <button class="btn btn-lg btn-primary btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+        <i class="fa fa-bars"></i>
+    </button>
+    
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasSidebar"
+        aria-labelledby="offcanvasSidebarLabel">
+        <div class="offcanvas-header border-bottom">
+            <h2 class="fw-bold mb-0">
+                <img src="RA3page/img/logo2.png" alt="RA3 RTOS Logo" class="logo2-img"> RA3 RTOS
+            </h2>
+            <!-- <h2 class="fw-bold mb-0"><i></i>RA3 RTOS</h2> -->
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="flex-shrink-0 bg-white">
+                <ul class="list-unstyled ps-0">
+                    <!-- <button class="btn align-items-center collapsed rounded btn-toggle-nav" data-bs-toggle="collapse"> -->
+                            <!-- <a href="#overview" class="text-body rounded btn-toggle-nav">Overview</a>
+                            <a href="#team" class="text-body rounded btn-toggle-nav">Meet the Team</a> -->
+                            <li class="mb-1">
+                                <a class="btn w-100 text-start" href="#overview">Overview</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="btn w-100 text-start" href="#team">Meet the Team</a>
+                            </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#home-collapse" aria-expanded="true">
+                            Getting Started
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#section-1-1" class="text-body rounded">Installation Instructions</a></li>
+                                <li><a href="#section-1-2" class="text-body rounded">Setting up the Development Environment</a></li>
+                                <li><a href="#section-1-3" class="text-body rounded">Quick Start Guide</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-2" aria-expanded="false">
+                            Core Concepts
+                        </button>
+                        <div class="collapse" id="collapse-2">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#section-2-1" class="text-body rounded">Task Management</a></li>
+                                <li><a href="#section-2-2" class="text-body rounded">Memory Management</a></li>
+                                <li><a href="#section-2-3" class="text-body rounded">Inter-task Communication</a></li>
+                                <li><a href="#section-2-4" class="text-body rounded">Scheduling</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-3" aria-expanded="false">
+                            API Reference
+                        </button>
+                        <div class="collapse" id="collapse-3">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#section-3-1" class="text-body rounded">Task Management APIs</a></li>
+                                <li><a href="#section-3-2" class="text-body rounded">Initialization and OS Control APIs</a></li>
+                                <li><a href="#section-3-3" class="text-body rounded">Hook APIs</a></li>
+                                <li><a href="#section-3-4" class="text-body rounded">Semaphore APIs</a></li>
+                                <li><a href="#section-3-5" class="text-body rounded">Mutex APIs</a></li>
+                                <li><a href="#section-3-6" class="text-body rounded">Event group APIs</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-4" aria-expanded="false">
+                            Configuration
+                        </button>
+                        <div class="collapse" id="collapse-4">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#section-4-1" class="text-body rounded">Section Iten 4.1</a></li>
+                                <li><a href="#section-4-2" class="text-body rounded">Section Iten 4.2</a></li>
+                                <li><a href="#section-4-3" class="text-body rounded">Section Iten 4.3</a></li>
+                                <li><a href="#section-4-4" class="text-body rounded">Section Iten 4.4</a></li>
+                                <li><a href="#section-4-5" class="text-body rounded">Section Iten 4.5</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-5" aria-expanded="false">
+                            Contributing to RA3 RTOS
+                        </button>
+                        <div class="collapse" id="collapse-5">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#section-5-1" class="text-body rounded">Review Contribution Guidelines</a></li>
+                                <li><a href="#section-5-2" class="text-body rounded">Contribution Steps</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas-footer border-top text-center mt-auto p-3">
+			<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+			<small>Designed by <a>Ali yasser❤️</a>
+            </small>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+<!-- Hero Start -->
+<div style="background: linear-gradient(135deg, #ff5722, #ff8a50); color: white; padding: 0rem 1rem; text-align: center; position: relative; overflow: hidden;">
+    <div style="padding: 2rem 0;">
+        <h1 style="font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); margin-bottom: 1rem; font-family: 'Poppins', sans-serif; opacity: 0; transform: translateY(-20px); animation: slideDown 1s forwards;">
+            <i class="fas fa-cogs" style="margin-right: 0.5rem;"></i>RA3 RTOS
+        </h1>
+        <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; font-family: 'Poppins', sans-serif; opacity: 0; animation: fadeIn 1.5s 0.5s forwards;">
+            Built by Ali Yasser, Powered by You
+        </h3>
+        <h5 style="font-size: 1.2rem; font-weight: 400; max-width: 600px; margin: 0 auto 1.5rem auto; opacity: 0; animation: fadeIn 2s 1s forwards;">
+            Dive into the code, make your mark, and be part of an evolving open-source project tailored for embedded systems. Let's innovate together!
+        </h5>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 id="overview" class="fw-bold display-4">Overview</h1>
+        <p>RA3 RTOS is an <strong>open-source real-time operating system</strong> designed for <strong>embedded systems</strong>, providing a robust foundation for developing applications across various processor architectures. Currently, RA3 RTOS supports the <strong>ARM Cortex-M3 processor</strong>, making it an ideal choice for developers looking to create efficient and responsive applications in this environment.</p>
+    
+        <p>The kernel of RA3 RTOS employs a <strong>preemptive priority round-robin scheduling algorithm</strong>, ensuring that tasks are managed effectively to meet real-time requirements. This approach allows for <strong>smooth task switching</strong> and <strong>high responsiveness</strong>, which are critical in embedded systems.</p>
+    
+        <p>As part of our commitment to continuous improvement and community involvement, we invite developers to join us in enhancing RA3 RTOS. Future plans include:</p>
+        <ul>
+            <li>Integration of additional scheduling algorithms to cater to a wider range of applications.</li>
+            <li>Development of an <strong>OSEK-compliant version</strong> for automotive and industrial applications.</li>
+        </ul>
+    
+        <p>Whether you are a seasoned developer or new to embedded systems, RA3 RTOS provides the tools and flexibility to bring your projects to life. Join us in shaping the future of this Egyptian RTOS and contribute to its growth and success.</p>
+    
+        <div class="callout callout-primary rounded">
+            <h5 class="fw-bold text-primary"><i class="fa fa-info-circle me-2"></i>Note</h5>
+            <p>This project is open for contributions! We welcome feedback, feature requests, and any form of collaboration. Feel free to reach out to improve RA3 RTOS.</p>
+        </div>
+    </div>
+    <!-- Section End -->
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 id="team" class="fw-bold display-4">Meet the Team</h1>
+        <p>Right now, the RA3 RTOS team consists solely of me, <strong>Ali Yasser Ali Abdallah</strong>. I am a passionate computer engineering student driven to contribute to the embedded systems industry by developing RA3 RTOS as an open-source, community-driven project. Through RA3, I aim to provide accessible, efficient solutions for embedded applications and offer a platform where developers can learn, innovate, and build together.</p>
+    
+        <p>This team is open for expansion! If you share a vision for advancing embedded systems through open-source contributions, we welcome you to join and help enhance RA3 RTOS.</p>
+    
+        <div class="d-flex justify-content-center mt-4">
+            <div class="card shadow-lg" style="width: 250px; border-radius: 15px; overflow: hidden;">
+                <img src="RA3page/img/me.jpg" class="card-img-top" alt="Ali Yasser Ali Abdallah" style="border-radius: 15px 15px 0 0;">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Ali Yasser Ali Abdallah</h5>
+                    <p class="card-text">Founder & Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section End -->
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 class="fw-bold display-4">Getting Started</h1>
+        
+        <h2 id="section-1-1" class="fw-bold mt-5">Installation Instructions</h2>
+        <p>
+            1. <strong>Download the Latest Version</strong>: Visit the Releases page to download the latest release of RA3 RTOS as a ZIP file.<br>
+            2. <strong>Unzip the File</strong>: Extract the contents of the downloaded ZIP file into your project directory.<br>
+            3. <strong>Add to Project</strong>: Link the RA3 RTOS files into your project setup.
+        </p>
+
+        <h2 id="section-1-2" class="fw-bold mt-5">Setting up the Development Environment</h2>
+        <p>
+            • <strong>Compiler Requirements</strong>: RA3 RTOS is currently built to support ARM Cortex-M3 processors. Use a compatible compiler (e.g., GCC for ARM).<br>
+            • <strong>Required Tools</strong>: Ensure your development environment includes debugging tools, a JTAG or SWD interface, and any additional peripherals needed for your specific application.
+        </p>
+
+        <h2 id="section-1-3" class="fw-bold mt-5">Quick Start Guide</h2>
+        <p>
+            1. <strong>Initialize the OS</strong>: Call <code>OS_Init()</code> to initialize RA3 RTOS before creating tasks or semaphores.<br>
+            2. <strong>Create Tasks</strong>: Use <code>OS_CreateTask()</code> to define and initialize tasks, setting each task's function, priority, and stack size.<br>
+            3. <strong>Start the OS</strong>: Call <code>OS_StartOS()</code> to start the scheduler and allow tasks to begin running.<br><br>
+            
+            For full documentation, refer to the <a href="https://github.com/ENGaliyasser/RA3-RTOS/blob/30245c0a75509bd3eca3e1bb194e8ddc91a90234/documentation/RA3_RTOS_documentation.pdf" target="_blank">RA3 RTOS Guide</a>.
+        </p>
+    </div>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 class="fw-bold display-4">Core Concepts</h1>
+        <p>Understanding the foundational concepts of RA3 RTOS is essential for effectively utilizing its features and developing applications. This section outlines the key components and mechanisms that drive the operating system.</p>
+
+        <h2 id="section-2-1" class="fw-bold mt-5">1. Task Management</h2>
+        <p>
+            At the heart of RA3 RTOS is its task management system, which allows for the creation, scheduling, and control of tasks. The Task Control Block (TCB) is a crucial data structure that defines each task within the system. It contains essential information, including:
+        </p>
+        <ul>
+            <li><strong>Priority</strong>: Determines the scheduling order of tasks, with lower values indicating higher priority.</li>
+            <li><strong>Task Name</strong>: A descriptive identifier for the task, aiding in debugging and management.</li>
+            <li><strong>Stack Size</strong>: Specifies the memory allocated for the task’s stack, which is essential for local variable storage and function calls.</li>
+            <li><strong>Task Function Pointer</strong>: A reference to the function that the task will execute.</li>
+        </ul>
+        <p>Tasks can exist in various states, including Ready, Running, and Suspended, which are managed by the scheduler to ensure efficient execution.</p>
+        <!-- Cool Display of Image -->
+        <div class="text-center mt-5">
+            <img src="RA3page/img/1.png" class="img-fluid  border" style="width: 600px; height: 350px;" alt="">
+        </div>
+        <h2 id="section-2-2" class="fw-bold mt-5">2. Memory Management</h2>
+        <p>
+            RA3 RTOS employs a flexible memory management strategy to allocate stacks for tasks dynamically. This approach allows for efficient use of memory resources, accommodating varying stack sizes based on the needs of different tasks. Key components include:
+        </p>
+        <ul>
+            <li><strong>Main Stack</strong>: A dedicated stack used by the operating system for handling interrupts and task switching.</li>
+            <li><strong>Task Stacks</strong>: Individual stacks allocated for each task, enabling isolated execution environments.</li>
+        </ul>
+        <p>Efficient memory management is crucial for embedded systems, where resources are often limited.</p>
+
+        <h2 id="section-2-3" class="fw-bold mt-5">3. Inter-task Communication</h2>
+        <p>
+            Effective communication between tasks is vital for synchronizing operations and sharing resources. RA3 RTOS provides several mechanisms for inter-task communication, including:
+        </p>
+        <ul>
+            <li><strong>Semaphores</strong>: Used to manage access to shared resources. A semaphore can signal when a resource is available or when a task should wait.</li>
+            <li><strong>Mutexes</strong>: Similar to semaphores, mutexes provide mutual exclusion for tasks needing to access a shared resource, ensuring that only one task can hold the lock at a time.</li>
+            <li><strong>Event Groups</strong>: Event groups allow multiple tasks to synchronize based on specific conditions, enabling them to wait for multiple events to occur before proceeding. This is useful for complex inter-task dependencies.</li>
+        </ul>
+        <p>These mechanisms facilitate coordinated interactions between tasks, enhancing the overall functionality of applications.</p>
+
+        <h2 id="section-2-4" class="fw-bold mt-5">4. Scheduling</h2>
+        <p>
+            RA3 RTOS employs a preemptive priority round-robin scheduling algorithm, which dynamically allocates CPU time based on task priorities. The scheduler continually evaluates task states and prioritizes execution based on their assigned priority levels. This approach allows high-priority tasks to preempt lower-priority tasks, ensuring timely execution of critical operations.
+        </p>
+        <p>As part of our future roadmap, we aim to introduce additional scheduling algorithms and an OSEK-compliant version to broaden the applicability of RA3 RTOS across various domains.</p>
+
+
+    </div>
+    <!-- Section End -->
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 class="fw-bold display-4">API Reference</h1>
+        <p>This section provides a detailed reference for the API functions available in RA3 RTOS. Each function is described with its purpose, parameters, return values, and an example of usage.</p>
+
+        <h2 id="section-3-1" class="fw-bold mt-5">1. Task Management APIs</h2>
+        
+        <h3>API Function: OS_CreateTask</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_CreateTask(OS_TCB* Task);</code></strong></p>
+        <p>Creates a new task and adds it to the list of tasks that are ready to run. Each task requires RAM that is used to hold the task state and is utilized by the task as its stack. The task's stack size and function are specified in the OS_TCB structure.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>Task</strong>: Pointer to an instance of the OS_TCB structure that defines the task's properties, including its priority, name, stack size, task function, and auto-start option.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the task was created successfully.</li>
+            <li><strong>TASK_CREATION_ERROR</strong>: If there was an error during task creation.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    // Task function to be created.
+    void MyTask(void) {
+        for(;;) {
+            // Task code goes here.
+        }
+    }
+
+    void CreateMyTask(void) {
+        OS_TCB myTask;
+        myTask.Priority = 1;               // Task priority
+        strncpy((char*)myTask.TaskName, "MyTask", sizeof(myTask.TaskName)); // Task name
+        myTask.StackSize = 100;            // Stack size in words
+        myTask.func = MyTask;              // Task function
+
+        OS_ErrorStatus status = OS_CreateTask(&myTask); // Create the task
+        if (status == OS_OK) {
+            // Task was created successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_ActivateTask</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_ActivateTask(OS_TCB* Task);</code></strong></p>
+        <p>Activates a previously created task and makes it ready to run. The task's state is changed to ready, allowing it to be scheduled by the RTOS.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>Task</strong>: Pointer to the OS_TCB structure of the task to be activated.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the task was activated successfully.</li>
+            <li><strong>TASK_CREATION_ERROR</strong>: If the task could not be activated.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void ActivateMyTask(void) {
+        OS_ErrorStatus status = OS_ActivateTask(&myTask); // Activate the task
+        if (status == OS_OK) {
+            // Task was activated successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_TerminateTask</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_TerminateTask(OS_TCB* Task);</code></strong></p>
+        <p>Terminates a running task and removes it from the task scheduler. The task cannot be activated again after termination.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>Task</strong>: Pointer to the OS_TCB structure of the task to be terminated.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the task was terminated successfully.</li>
+            <li><strong>TASK_CREATION_ERROR</strong>: If the task could not be terminated.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void TerminateMyTask(void) {
+        OS_ErrorStatus status = OS_TerminateTask(&myTask); // Terminate the task
+        if (status == OS_OK) {
+            // Task was terminated successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_DelayTask</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_DelayTask(OS_TCB* Task, uint32_t NoOfTicks);</code></strong></p>
+        <p>Delays the execution of the specified task for a given number of ticks.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>Task</strong>: Pointer to the OS_TCB structure of the task to be delayed.</li>
+            <li><strong>NoOfTicks</strong>: Number of ticks to delay the task.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the task was delayed successfully.</li>
+            <li><strong>TASK_CREATION_ERROR</strong>: If the task could not be delayed.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void DelayMyTask(void) {
+        OS_ErrorStatus status = OS_DelayTask(&myTask, 10); // Delay the task for 10 ticks
+        if (status == OS_OK) {
+            // Task was delayed successfully
+        }
+    }
+        </code></pre>
+
+        <h2 id="section-3-2" class="fw-bold mt-5">2. Initialization and OS Control APIs</h2>
+
+        <h3>API Function: OS_Init</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_Init(void);</code></strong></p>
+        <p>Initializes the RA3 RTOS kernel by setting up essential data structures, initializing resources, and preparing the system for task scheduling and synchronization. This function should be called before any other RTOS functions to ensure that the RTOS kernel is correctly initialized and ready for operation.</p>
+        <p><strong>Parameters:</strong> None</p>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the initialization was successful.</li>
+            <li><strong>OS_ERROR</strong>: If an error occurred during initialization.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void main(void) {
+        OS_ErrorStatus status = OS_Init();  // Initialize the RTOS
+        if (status == OS_OK) {
+            // Initialization succeeded, proceed with task creation and scheduling
+            OS_StartScheduler();  // Start task scheduling
+        } else {
+            // Handle initialization error
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_StartOS</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>OS_ErrorStatus OS_StartOS();</code></strong></p>
+        <p>Starts the operating system scheduler. This function must be called after creating and activating all tasks.</p>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_OK</strong>: If the OS started successfully.</li>
+            <li><strong>TASK_CREATION_ERROR</strong>: If there was an error starting the OS.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void StartMyRTOS(void) {
+        OS_ErrorStatus status = OS_StartOS(); // Start the RTOS scheduler
+        if (status == OS_OK) {
+            // RTOS started successfully
+        }
+    }
+        </code></pre>
+
+        <h2 id="section-3-3" class="fw-bold mt-5">3. Hook APIs</h2>
+
+        <h3>API Function: OS_RegisterSysTickHook</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>void OS_RegisterSysTickHook(OS_SysTickHook callback);</code></strong></p>
+        <p>Sets a custom callback function to be executed at each SysTick interrupt. This function allows the user to define specific actions or behaviors that should occur periodically with every SysTick event.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>callback</strong>: Pointer to the function that should be called at each SysTick interrupt.</li>
+        </ul>
+        <p><strong>Returns:</strong> None</p>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void MySysTickHandler(void) {
+        // Custom code to execute on each SysTick
+    }
+
+void SetMySysTickHook(void) {
+    OS_RegisterSysTickHook(MySysTickHandler); // Set the SysTick hook to the custom handler
+}
+        </code></pre>
+
+        <h3>API Function: OS_RegisterIdleTaskHook</h3>
+        <p><strong>Header File:</strong> Tasks.h</p>
+        <p><strong><code>void OS_RegisterIdleTaskHook(OS_IdleTaskHook callback);</code></strong></p>
+        <p>Sets a custom callback function to be executed when the OS enters the idle state. This allows the user to define behavior for when no tasks are ready to run.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>callback</strong>: Pointer to the function that should be called when the OS is idle.</li>
+        </ul>
+        <p><strong>Returns:</strong> None</p>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void MyIdleTaskHandler(void) {
+        // Custom code to execute when the OS is idle
+    }
+
+void SetMyIdleTaskHook(void) {
+    OS_RegisterIdleTaskHook(MyIdleTaskHandler); // Set the idle task hook to the custom handler
+}
+        </code></pre>
+        
+
+        <h2 id="section-3-4" class="fw-bold mt-5">4. Semaphore APIs</h2>
+        
+        <h3>API Function: OS_InitSemaphore</h3>
+        <p><strong>Header File:</strong> semaphore.h</p>
+        <p><strong><code>OS_SemaphoreState OS_InitSemaphore(OS_Semaphore* semaphore, uint8_t initialCount);</code></strong></p>
+        <p>Initializes a semaphore with a specified initial count. This count represents the number of available resources that the semaphore can manage.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>semaphore</strong>: Pointer to the OS_Semaphore structure that will be initialized.</li>
+            <li><strong>initialCount</strong>: The initial count of the semaphore, representing the number of resources available. It must be greater than or equal to zero.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_SEMAPHORE_INIT_OK</strong>: If the semaphore was initialized successfully.</li>
+            <li><strong>OS_SEMAPHORE_ALREADY_ACQUIRED</strong>: If there was an error initializing the semaphore.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void InitMySemaphore(void) {
+        OS_Semaphore mySemaphore;
+        OS_SemaphoreState state = OS_InitSemaphore(&mySemaphore, 1); // Initialize semaphore with 1 resource
+        if (state == OS_SEMAPHORE_INIT_OK) {
+            // Semaphore initialized successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_AcquireSemaphore</h3>
+        <p><strong>Header File:</strong> semaphore.h</p>
+        <p><strong><code>OS_SemaphoreState OS_AcquireSemaphore(OS_Semaphore* semaphore, OS_TCB* task);</code></strong></p>
+        <p>Attempts to acquire the specified semaphore. If the semaphore is available, the task becomes the owner, and the semaphore count is decremented. If it is busy, the task is added to the waiting queue.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>semaphore</strong>: Pointer to the OS_Semaphore structure that the task is attempting to acquire.</li>
+            <li><strong>task</strong>: Pointer to the OS_TCB structure of the task attempting to acquire the semaphore.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_SEMAPHORE_AVAILABLE</strong>: If the semaphore was acquired successfully.</li>
+            <li><strong>OS_SEMAPHORE_BUSY</strong>: If the semaphore is currently busy and the task is added to the waiting queue.</li>
+            <li><strong>OS_SEMAPHORE_ALREADY_ACQUIRED</strong>: If the task already owns the semaphore.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void AcquireMySemaphore(OS_TCB* myTask) {
+        OS_SemaphoreState state = OS_AcquireSemaphore(&mySemaphore, myTask); // Attempt to acquire the semaphore
+        if (state == OS_SEMAPHORE_AVAILABLE) {
+            // Semaphore acquired successfully
+        } else if (state == OS_SEMAPHORE_BUSY) {
+            // Semaphore is busy; task is now waiting
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_ReleaseSemaphore</h3>
+        <p><strong>Header File:</strong> semaphore.h</p>
+        <p><strong><code>OS_SemaphoreState OS_ReleaseSemaphore(OS_Semaphore* semaphore);</code></strong></p>
+        <p>Releases the semaphore, making it available for other tasks. If there are tasks waiting for the semaphore, one is woken up and allowed to acquire the semaphore.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>semaphore</strong>: Pointer to the OS_Semaphore structure that is to be released.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_SEMAPHORE_AVAILABLE</strong>: If the semaphore was released successfully.</li>
+            <li><strong>OS_SEMAPHORE_ALREADY_ACQUIRED</strong>: If the semaphore was not owned by any task at the time of release.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void ReleaseMySemaphore(void) {
+        OS_SemaphoreState state = OS_ReleaseSemaphore(&mySemaphore); // Release the semaphore
+        if (state == OS_SEMAPHORE_AVAILABLE) {
+            // Semaphore released successfully
+        }
+    }
+        </code></pre>
+
+        <h2 id="section-3-5" class="fw-bold mt-5">5. Mutex APIs</h2>
+
+        <h3>API Function: OS_InitMutex</h3>
+        <p><strong>Header File:</strong> Mutex.h</p>
+        <p><strong><code>OS_MutexState OS_InitMutex(OS_Mutex* mutex);</code></strong></p>
+        <p>Initializes a mutex, setting its initial state to unlocked. This function prepares the mutex for use by a task.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>mutex</strong>: Pointer to the OS_Mutex structure that will be initialized.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_MUTEX_INIT_OK</strong>: If the mutex was initialized successfully.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void InitMyMutex(void) {
+        OS_Mutex myMutex;
+        OS_MutexState state = OS_InitMutex(&myMutex); // Initialize the mutex
+        if (state == OS_MUTEX_INIT_OK) {
+            // Mutex initialized successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_AcquireMutex</h3>
+        <p><strong>Header File:</strong> Mutex.h</p>
+        <p><strong><code>OS_MutexState OS_AcquireMutex(OS_Mutex* mutex, OS_TCB* task);</code></strong></p>
+        <p>Attempts to acquire the specified mutex for the given task. If the mutex is already locked and owned by another task, the calling task will be blocked and added to the waiting queue.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>mutex</strong>: Pointer to the OS_Mutex structure that the task is attempting to acquire.</li>
+            <li><strong>task</strong>: Pointer to the OS_TCB structure of the task attempting to acquire the mutex.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_MUTEX_AVAILABLE</strong>: If the mutex was acquired successfully.</li>
+            <li><strong>OS_MUTEX_BUSY</strong>: If the mutex is currently busy, and the task has been added to the waiting queue.</li>
+            <li><strong>OS_MUTEX_ALREADY_ACQUIRED</strong>: If the task already owns the mutex.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void AcquireMyMutex(OS_TCB* myTask) {
+        OS_MutexState state = OS_AcquireMutex(&myMutex, myTask); // Attempt to acquire the mutex
+        if (state == OS_MUTEX_AVAILABLE) {
+            // Mutex acquired successfully
+        } else if (state == OS_MUTEX_BUSY) {
+            // Mutex is busy; task is now waiting
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_ReleaseMutex</h3>
+        <p><strong>Header File:</strong> Mutex.h</p>
+        <p><strong><code>OS_MutexState OS_ReleaseMutex(OS_Mutex* mutex);</code></strong></p>
+        <p>Releases the mutex from the current owner, making it available for other tasks. If there are tasks waiting for the mutex, one of them is woken up and allowed to acquire the mutex.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>mutex</strong>: Pointer to the OS_Mutex structure that is to be released.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_MUTEX_AVAILABLE</strong>: If the mutex was released successfully.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void ReleaseMyMutex(void) {
+        OS_MutexState state = OS_ReleaseMutex(&myMutex); // Release the mutex
+        if (state == OS_MUTEX_AVAILABLE) {
+            // Mutex released successfully
+        }
+    }
+        </code></pre>
+
+        <h2 id="section-3-6" class="fw-bold mt-5">6. Event Group APIs</h2>
+
+        <h3>API Function: OS_InitEventGroup</h3>
+        <p><strong>Header File:</strong> event_group.h</p>
+        <p><strong><code>OS_EventGroupState OS_InitEventGroup(OS_EventGroup* eventGroup);</code></strong></p>
+        <p>Initializes an event group. This function prepares the event group for use by tasks that require synchronization.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>eventGroup</strong>: Pointer to the OS_EventGroup structure that will be initialized.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_EVENT_GROUP_INIT_OK</strong>: If the event group was initialized successfully.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void InitMyEventGroup(void) {
+        OS_EventGroup myEventGroup;
+        OS_EventGroupState state = OS_InitEventGroup(&myEventGroup); // Initialize the event group
+        if (state == OS_EVENT_GROUP_INIT_OK) {
+            // Event group initialized successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_SetEvent</h3>
+        <p><strong>Header File:</strong> event_group.h</p>
+        <p><strong><code>OS_EventGroupState OS_SetEvent(OS_EventGroup* eventGroup, uint32_t eventMask);</code></strong></p>
+        <p>Sets the specified bits in the event group, allowing tasks waiting for those events to be notified.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>eventGroup</strong>: Pointer to the OS_EventGroup structure in which the events are being set.</li>
+            <li><strong>eventMask</strong>: Bitmask specifying which events to set in the event group.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_EVENT_SET_OK</strong>: If the events were set successfully.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void SetMyEvent(void) {
+        OS_EventGroupState state = OS_SetEvent(&myEventGroup, 0x01); // Set event with bitmask 0x01
+        if (state == OS_EVENT_SET_OK) {
+            // Event set successfully
+        }
+    }
+        </code></pre>
+
+        <h3>API Function: OS_ClearEvent</h3>
+        <p><strong>Header File:</strong> event_group.h</p>
+        <p><strong><code>OS_EventGroupState OS_ClearEvent(OS_EventGroup* eventGroup, uint32_t eventMask);</code></strong></p>
+        <p>Clears the specified bits in the event group, indicating that those events are no longer valid.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><strong>eventGroup</strong>: Pointer to the OS_EventGroup structure in which the events are being cleared.</li>
+            <li><strong>eventMask</strong>: Bitmask specifying which events to clear in the event group.</li>
+        </ul>
+        <p><strong>Returns:</strong></p>
+        <ul>
+            <li><strong>OS_EVENT_CLEAR_OK</strong>: If the events were cleared successfully.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>
+    void ClearMyEvent(void) {
+        OS_EventGroupState state = OS_ClearEvent(&myEventGroup, 0x01); // Clear event with bitmask 0x01
+        if (state == OS_EVENT_CLEAR_OK) {
+            // Event cleared successfully
+        }
+    }
+        </code></pre>
+    </div>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 class="fw-bold display-4">Configuration for RA3 RTOS</h1>
+        
+        <h2 id="section-4-1" class="fw-bold mt-5">Header File: config.h</h2>
+        <p style="font-size: 1.2em;">
+            The <strong>config.h</strong> configuration file provides essential options to tailor RA3 RTOS to meet specific system requirements. By adjusting these parameters, you can define core settings such as stack size, timing, priority levels, CPU frequency, and other key aspects that influence the RTOS's performance in embedded applications. Below, the default parameter values are provided to guide initial configurations for RA3 RTOS in your project.
+        </p>
+        <pre><code>
+            // Define macro for OS preemption control
+#define OS_PREEMPTION_ENABLED         1  // Set to 1 to enable, 0 to disable preemption
+            
+// Size of the main stack in bytes
+#define OS_MAIN_STACK_SIZE            3072
+            
+// Default stack size for tasks in bytes
+#define OS_DEFAULT_TASK_STACK_SIZE    1024
+            
+// Time duration of each tick in milliseconds
+#define OS_TICK_TIME_IN_MS            1
+            
+// CPU clock frequency in hertz
+#define OS_CPU_CLOCK_FREQ_IN_HZ       72000000  
+            
+// Lowest priority level for tasks
+#define OS_LOWEST_PRIORITY            255
+            
+// Highest priority level for tasks
+#define OS_HIGHEST_PRIORITY           0
+            
+// Enable/disable the tick task hook
+#define OS_TICK_HOOK_ENABLED          1
+            
+// Enable/disable the idle task hook
+#define OS_IDLE_TASK_HOOK_ENABLED     1
+        </code></pre>        
+
+        <h2 id="section-4-2" class="fw-bold mt-5">Configuration Parameters in config.h</h2>
+
+        <p><strong>PREEMPTION</strong><br>
+            <code>#define OS_PREEMPTION_ENABLED 1</code><br>
+            <strong>Description:</strong> Enables or disables OS preemption. If set to 1, preemption is enabled, allowing the OS to switch tasks based on priority. If set to 0, the PendSV trigger for task switching will be removed, disabling preemption.
+        </p>
+        
+        <p><strong>MAIN_STACK_SIZE</strong><br>
+            <code>#define OS_MAIN_STACK_SIZE 3072</code><br>
+            <strong>Description:</strong> Sets the size of the main stack used by the RTOS in bytes. Adjust this according to your system’s memory requirements, especially if the main stack handles intensive or recursive tasks.
+        </p>
+
+        <p><strong>DEFAULT_TASK_STACK_SIZE</strong><br>
+            <code>#define OS_DEFAULT_TASK_STACK_SIZE 1024</code><br>
+            <strong>Description:</strong> Specifies the default stack size for tasks. Increase this value if tasks require more stack space (e.g., tasks involving deep function calls or large local variables).
+        </p>
+
+        <p><strong>TICK_TIME_IN_MS</strong><br>
+            <code>#define OS_TICK_TIME_IN_MS 1</code><br>
+            <strong>Description:</strong> Sets the duration of each OS tick. This tick frequency controls the RTOS's task switching and timing functions. A lower tick duration means more frequent task switching but higher CPU load.
+        </p>
+
+        <p><strong>CPU_CLOCK_FREQ_IN_HZ</strong><br>
+            <code>#define OS_CPU_CLOCK_FREQ_IN_HZ 7200000</code><br>
+            <strong>Description:</strong> Defines the CPU clock frequency in Hz. Accurate setting is essential for precise timing in the RTOS scheduler. Ensure this matches your processor’s actual frequency for optimal performance.
+        </p>
+
+        <p><strong>OS_LOWEST_PRIORITY</strong><br>
+            <code>#define OS_LOWEST_PRIORITY 255</code><br>
+            <strong>Description:</strong> Specifies the lowest priority level available for tasks, where higher numbers represent lower priorities. Setting this higher allows for a more granular priority system.
+        </p>
+
+        <p><strong>OS_HIGHEST_PRIORITY</strong><br>
+            <code>#define OS_HIGHEST_PRIORITY 0</code><br>
+            <strong>Description:</strong> Sets the highest priority level for tasks. Lower numbers represent higher priorities in RA3 RTOS. Set this to define the top priority available for critical tasks.
+        </p>
+
+        <p><strong>IDLE_TASK_HOOK_ENABLED</strong><br>
+            <code>#define OS_IDLE_TASK_HOOK_ENABLED 1</code><br>
+            <strong>Description:</strong> Enables or disables the idle task hook. If enabled (1), the RTOS will execute a user-defined callback whenever the idle task runs, allowing low-priority background operations.
+        </p>
+
+        <p><strong>TICK_HOOK_ENABLED</strong><br>
+            <code>#define OS_TICK_HOOK_ENABLED 1</code><br>
+            <strong>Description:</strong> Enables or disables the tick hook. If enabled (1), the RTOS will execute a user-defined callback function at each tick, useful for periodic background tasks.
+        </p>
+
+        <div class="callout callout-primary rounded">
+            <h5 class="fw-bold text-primary"><i class="fa fa-info-circle me-2"></i>Note</h5>
+            <p><strong>Note:</strong> Ensure you review and adjust these parameters based on the specific needs of your embedded system for optimal performance. Misconfiguration can lead to unexpected behavior in task timing, scheduling, and memory utilization.</p>
+        </div>
+    </div>
+    <!-- Section End -->
+    <!-- Section Start -->
+    <div class="container py-5">
+        <h1 class="fw-bold display-4">Contributing to RA3 RTOS</h1>
+        <p>
+            Contributions from the community are essential to the growth and improvement of RA3 RTOS! By contributing, you’re helping to enhance the RTOS's functionality and reliability for embedded systems worldwide. Follow the guidelines and steps below to make your contributions count!
+        </p>
+
+        <!-- Contribution Guidelines Section -->
+        <h2 id="section-1" class="fw-bold mt-5">1. Review Contribution Guidelines</h2>
+        <p>
+            Before starting, please refer to the <a href="https://github.com/ENGaliyasser/RA3-RTOS/blob/30245c0a75509bd3eca3e1bb194e8ddc91a90234/documentation/RA3_RTOS_documentation.pdf" target="_blank">RA3 RTOS Documentation</a> to understand the coding standards, structure, and best practices that maintain the project’s consistency and quality. Ensure you follow these guidelines to keep the codebase organized and efficient.
+        </p>
+
+        <!-- Contribution Steps Section -->
+        <h2 id="section-2" class="fw-bold mt-5">2. Follow These Steps to Contribute</h2>
+        <ol>
+            <li><strong>Fork the Repository</strong>: Start by forking the RA3 RTOS repository to your GitHub account to create your own workspace for experimentation and improvements.</li>
+        
+            <li><strong>Clone Your Fork</strong>: Bring the repository to your local machine for easy editing.
+                <pre><code>git clone https://github.com/ENGaliyasser/RA3-RTOS.git
+cd RA3-RTOS
+                </code></pre>
+            </li>
+        
+            <li><strong>Create a New Branch</strong>: Organize your changes by creating a new branch for your feature or bug fix, keeping your work clean and isolated.
+                <pre><code>git checkout -b feature/my-new-feature
+                </code></pre>
+            </li>
+        
+            <li><strong>Implement Your Changes</strong>: Dive in! Add your new feature, squash that bug, or enhance the existing codebase while following the project’s coding guidelines. Your improvements help RA3 RTOS serve the embedded systems community better!</li>
+        
+            <li><strong>Test Your Changes</strong>: Validate your updates by testing thoroughly. Quality is key, so make sure everything runs smoothly and reliably.</li>
+        
+            <li><strong>Commit Your Changes</strong>: Commit your work with a meaningful, descriptive message that explains what you’ve added.
+                <pre><code>git add .
+git commit -m "Add my new feature"
+                </code></pre>
+            </li>
+        
+            <li><strong>Push Your Changes</strong>: Share your work by pushing the new branch to your forked repository.
+                <pre><code>git push origin feature/my-new-feature
+                </code></pre>
+            </li>
+        
+            <li><strong>Create a Pull Request</strong>: Head back to the original RA3 RTOS repository and submit a pull request, sharing your contribution with the maintainers. Include a clear title and description to help others understand the value you’re adding.</li>
+        
+            <li><strong>Address Feedback</strong>: Engage with maintainers, refine your work, and address any comments or suggestions. This collaboration helps bring out the best in your contribution!</li>
+        
+            <li><strong>🎉 Celebrate Your Contribution! 🎉</strong>: When your pull request is merged, congratulations are in order! You’ve officially contributed to RA3 RTOS and made an impact in the embedded systems world. Thank you for your valuable contribution, and welcome to the RA3 RTOS community!</li>
+        </ol>
+        
+    </div>
+    <!-- Section End -->
+
+
+    <div class="mb-4">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+    <div class="mb-4">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+    </div>
+    <div class="pb-3">
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+    </div>
+
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="RA3page/lib/jquery/jquery-3.4.1.min.js"></script>
+    <script src="RA3page/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="RA3page/lib/easing/easing.min.js"></script>
+    <script src="RA3page/lib/highlight/highlight.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="RA3page/js/main.js"></script>
+</body>
+
+</html>

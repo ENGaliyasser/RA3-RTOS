@@ -1,0 +1,159 @@
+:root {
+    --bs-primary: #ff7043; /* Softer reddish-orange */
+    --bs-secondary: #d84315; /* Softer darker red */
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important; /* Override Bootstrap's primary background color */
+    color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--bs-secondary);
+    border-color: #b71c1c; /* Darker shade on hover */
+    color: #fff; /* Keep text white */
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    color: #FFFFFF;
+    z-index: 99;
+}
+
+.btn-offcanvas {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 99;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas-start {
+    width: 280px;
+}
+
+.offcanvas-start a.btn {
+    box-shadow: none !important;
+}
+
+.btn-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    box-shadow: none !important;
+}
+
+.btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: var(--bs-primary);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+    display: flex;
+    width: calc(100% - 1.75rem);
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    color: #FFFFFF !important;
+    background-color: var(--bs-primary);
+}
+
+.callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-color: rgb(233, 236, 239);
+    border-left-width: 0.25rem;
+}
+
+.callout-primary {
+    border-left-color: var(--bs-primary);
+}
+
+.callout-secondary {
+    border-left-color: var(--bs-secondary);
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: #ff7043!important;
+}
+a {  
+    text-decoration: none!important;
+}
+.ra3-navbar-brand .logo-img {
+    width: 75px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio of the logo */
+    vertical-align: middle; /* Aligns the image vertically with text */
+    margin-bottom: 14px; /* Adds spacing between the logo and text */
+    margin-left: 8px; /* Adds spacing between the logo and text */
+    
+}
+/* .ra3-navbar-brand h1 {
+    color: #000000!important;
+} */
+.logo2-img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio of the logo */
+    vertical-align: middle; /* Aligns the image vertically with text */
+    margin-bottom: 10px; /* Adds spacing between the logo and text */
+    
+}
+    /* Style for links on hover to add the orange color */
+    .list-unstyled a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .list-unstyled a:hover {
+        color: var(--bs-primary);
+    }
+    /* Slide-down animation for the main title */
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Fade-in animation for the tagline and description */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
