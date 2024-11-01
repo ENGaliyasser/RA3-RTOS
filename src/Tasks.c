@@ -171,7 +171,7 @@ void OS_UpdateNoOfTicks() {
  * @param callback The function pointer for the SysTick hook callback.
  */
 OS_SysTickHook SysTickHook = NULL;
-void OS_SetSysTickHook(OS_SysTickHook callback) {
+void OS_RegisterSysTickHook(OS_SysTickHook callback) {
     SysTickHook = callback;
 }
 /**

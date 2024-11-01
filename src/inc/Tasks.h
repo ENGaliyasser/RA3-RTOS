@@ -99,6 +99,7 @@ void OS_UpdateReadyQueue();
 void OS_DecideNext();
 void OS_SvcServices(uint32_t* Stack_Pointer);
 void OS_UpdateNoOfTicks();
+void OS_RegisterSysTickHook(OS_SysTickHook callback);
 void OS_RegisterIdleHook(OS_IdleHookCallback callback);
 void OS_IdleTask();
 OS_ErrorStatus OS_Init();
