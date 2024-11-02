@@ -114,7 +114,7 @@ a {
     width: 75px; /* Adjust the width as needed */
     height: auto; /* Keeps the aspect ratio of the logo */
     vertical-align: middle; /* Aligns the image vertically with text */
-    margin-bottom: 14px; /* Adds spacing between the logo and text */
+    margin-bottom: 4px; /* Adds spacing between the logo and text */
     margin-left: 8px; /* Adds spacing between the logo and text */
     
 }
